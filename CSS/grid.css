@@ -1,0 +1,89 @@
+*, *:after, *:before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+.container:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+[class*="col-"] {
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* --- Columns --- */
+
+.col-1-10 {
+	width: 10%;
+}
+
+.col-1-5, .col-2-10 {
+	width: 20%;
+}
+
+.col-3-10 {
+	width: 30%;
+}
+
+.col-2-5, .col-4-10 {
+	width: 40%;
+}
+
+.col-5-10 {
+	width: 50%;
+}
+
+.col-3-5, .col-6-10 {
+	width: 60%;
+}
+
+.col-7-10 {
+	width: 70%;
+}
+
+.col-4-5, .col-8-10 {
+	width: 80%;
+}
+
+.col-9-10 {
+	width: 90%;
+}
+
+.col-1 {
+	width: 100%;
+}
+
+
+/* --- Base media queries --- */
+
+@media (max-width: 768px) {
+	.container {
+		width: 95%;
+	}
+
+	[class*="col-"] {
+		width: 100%;
+		float: none;
+	}
+}
+
+/* --- Example media query for very wide screens --- */
+
+@media (max-width: 1900px) {
+	.container {
+		max-width: 1680px;
+	}
+}
