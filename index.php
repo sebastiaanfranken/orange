@@ -18,30 +18,28 @@
 			<main>
 				<p>Orange CSS framework is een klein simpel framework voor responsive websites. Het doel van het framework is een zo compleet mogelijk framework leveren wat alleen het responsive deel van een layout doet. De styling en basisopmaak zul je zelf moeten doen.</p>
 				<section>
-					<div class="row">
-						<div class="col-1">1/1</div>
-					</div> <!-- /.row -->
 
 					<div class="row">
-						<?php for($a = 1; $a <= 2; $a++) : ?>
-						<div class="col-5-10">5/10</div>
+						<?php for($i = 1; $i <= 2; $i++) : ?>
+						<div class="col-5-10"><em>.col-5-10</em> of <em>.col-2-4</em></div>
 						<?php endfor;?>
 					</div> <!-- /.row -->
 
 					<div class="row">
-						<?php for($b = 1; $b <= 5; $b++) : ?>
-						<div class="col-1-5">1/5</div>
+						<?php for($i = 1; $i <= 4; $i++) : ?>
+						<div class="col-1-4"><em>.col-1-4</em></div>
+						<?php endfor;?>
+					</div> <!-- /.row -->
+					
+					<div class="row">
+						<?php for($i = 1; $i <= 5; $i++) : ?>
+						<div class="col-2-10"><em>.col-2-10</em> of <em>.col-1-5</em></div>
 						<?php endfor;?>
 					</div> <!-- /.row -->
 
 					<div class="row">
-						<div class="col-2-5">2/5</div>
-						<div class="col-3-5">3/5</div>
-					</div> <!-- /.row -->
-
-					<div class="row">
-						<?php for($c = 1; $c <= 10; $c++) : ?>
-						<div class="col-1-10">1/10</div>
+						<?php for($i = 1; $i <= 10; $i++) : ?>
+						<div class="col-1-10"><em>.col-1-10</em></div>
 						<?php endfor;?>
 					</div> <!-- /.row -->
 				</section>
@@ -49,22 +47,65 @@
 				<section>
 					<h3>Formaten</h3>
 					<p>Met <em>Orange</em> heb je een aantal opties qua kolommen: </p>
-					<ul>
-						<li><strong>Vijfdes</strong></li>
-						<ul>
-							<?php for($i = 1; $i <= 4; $i++) : ?>
-							<li><?php print $i;?>/5 = <?php print (100/5) * $i;?>%</li>
-							<?php endfor;?>
-							<li>1 = 100%</li>
-						</ul>
-						<li><strong>Tiendes</strong></li>
-						<ul>
-							<?php for($i = 1; $i <= 9; $i++) : ?>
-							<li><?php print $i;?>/10 = <?php print (100/10) * $i;?>%</li>
-							<?php endfor;?>
-							<li>1 = 100%</li>
-						</ul>
-					</ul>
+					<table cellpadding="0" cellspacing="0">
+						<thead>
+							<tr>
+								<th>Klasse</th>
+								<th>Breedte</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td><em>.col-1-10</em></td>
+								<td>10%</td>
+							</tr>
+							<tr>
+								<td><em>.col-2-10</em> of <em>.col-1-5</em></td>
+								<td>20%</td>
+							</tr>
+							<tr>
+								<td><em>.col-1-4</em></td>
+								<td>25%</td>
+							</tr>
+							<tr>
+								<td><em>.col-3-10</em></td>
+								<td>30%</td>
+							</tr>
+							<tr>
+								<td><em>.col-4-10</em> of <em>.col-2-5</em></td>
+								<td>40%</td>
+							</tr>
+							<tr>
+								<td><em>.col-5-10</em> of <em>.col-2-4</em></td>
+								<td>50%</td>
+							</tr>
+							<tr>
+								<td><em>.col-6-10</em> of <em>.col-3-5</em></td>
+								<td>60%</td>
+							</tr>
+							<tr>
+								<td><em>.col-7-10</em></td>
+								<td>70%</td>
+							</tr>
+							<tr>
+								<td><em>.col-3-4</em></td>
+								<td>75%</td>
+							</tr>
+							<tr>
+								<td><em>.col-8-10</em> of <em>.col-4-5</em></td>
+								<td>80%</td>
+							</tr>
+							<tr>
+								<td><em>.col-9-10</em></td>
+								<td>90%</td>
+							</tr>
+							<tr>
+								<td><em>.col-1</em> of <em>.col-10-10</em> of <em>.col-5-5</em> of <em>.col-4-4</em></td>
+								<td>100%</td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 			</main>
 		</div> <!-- /.container -->
