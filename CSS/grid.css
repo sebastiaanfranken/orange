@@ -1,4 +1,6 @@
-*, *:after, *:before {
+/* --- Base CSS --- */
+
+*, *:before, *:after {
 	margin: 0;
 	padding: 0;
 	-webkit-box-sizing: border-box;
@@ -7,18 +9,19 @@
 }
 
 .container {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
-	max-width: 1440px;
+	max-width: 1280px;
+	min-height: 1px;
 }
 
 .container:after {
-	content: " ";
-	display: table;
+	content: "";
+	display: block;
 	clear: both;
 }
 
-[class*="col-"] {
+[class^="col-"] {
 	float: left;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -27,72 +30,80 @@
 
 /* --- Columns --- */
 
-.col-1-10 {
-	width: 10%;
+.col-1-2 {
+	width: 50%;
 }
 
-.col-1-5, .col-2-10 {
-	width: 20%;
+.col-2-2 {
+	width: 100%;
+}
+
+.col-1-3 {
+	width: 33%;
+}
+
+.col-2-3 {
+	width: 66%;
+}
+
+.col-3-3 {
+	width: 100%;
 }
 
 .col-1-4 {
 	width: 25%;
 }
 
-.col-3-10 {
-	width: 30%;
-}
-
-.col-2-5, .col-4-10 {
-	width: 40%;
-}
-
-.col-5-10, .col-2-4 {
+.col-2-4 {
 	width: 50%;
-}
-
-.col-3-5, .col-6-10 {
-	width: 60%;
-}
-
-.col-7-10 {
-	width: 70%;
 }
 
 .col-3-4 {
 	width: 75%;
 }
 
-.col-4-5, .col-8-10 {
-	width: 80%;
-}
-
-.col-9-10 {
-	width: 90%;
-}
-
-.col-1, .col-5-5, .col-10-10, .col-4-4 {
+.col-4-4 {
 	width: 100%;
 }
 
+.col-1-5 {
+	width: 20%;
+}
 
-/* --- Base media queries --- */
+.col-2-5 {
+	width: 40%;
+}
+
+.col-3-5 {
+	width: 60%;
+}
+
+.col-4-5 {
+	width: 80%;
+}
+
+.col-5-5 {
+	width: 100%;
+}
+
+.col-2-2,
+.col-3-3,
+.col-4-4,
+.col-5-5 {
+	float: none;
+}
+
+/* --- Base media query --- */
 
 @media (max-width: 768px) {
-	.container {
-		width: 95%;
-	}
 
-	[class*="col-"] {
+	.container {
+		width: 100%;
+	}
+	
+	[class^="col-"] {
 		width: 100%;
 		float: none;
 	}
-}
 
-/* --- Example media query for very wide screens --- */
-
-@media (max-width: 1900px) {
-	.container {
-		max-width: 1680px;
-	}
 }
