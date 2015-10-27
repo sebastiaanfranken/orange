@@ -1,0 +1,41 @@
+html {
+	font-size: 14px;
+}
+
+body {
+	font-family: 'Roboto', ubuntu, verdana, arial, sans-serif;
+	font-size: 1em;
+	color: #232323;
+	background: #fff;
+	line-height: 1.1;
+}
+
+main {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+main > header {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+main > header h1 {
+	margin-bottom: 8px;
+	color: #404040;
+	font-weight: normal;
+}
+
+main > section.grid {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+main > section.grid > [class^="col-"] {
+	background: #eee;
+	outline: 1px solid #ddd;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}

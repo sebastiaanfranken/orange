@@ -1,0 +1,104 @@
+/* --- General bootstrapping CSS --- */
+
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* --- Grids --- */
+
+.grid {
+	margin: 0 auto;
+	width: 90%;
+}
+
+@media all and (min-width: 768px) {
+	.grid:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+	.grid {
+		max-width: 723px;
+	}
+}
+
+@media all and (min-width: 992px) and (max-width: 1200px) {
+	.grid {
+		max-width: 993px;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	.grid {
+		max-width: 1140px;
+	}
+}
+
+/* --- Columns --- */
+
+@media all and (min-width: 768px) {
+	[class^="col-"] {
+		float: left;
+		margin-left: 1.6%;
+		min-height: 1px;
+	}
+
+	[class^="col-"]:first-child {
+		margin-left: 0;
+	}
+
+	.col-1-12 {
+		width: 6.866%;
+	}
+
+	.col-2-12 {
+		width: 15.33%;
+	}
+
+	.col-3-12 {
+		width: 23.8%;
+	}
+
+	.col-4-12 {
+		width: 32.26%;
+	}
+
+	.col-5-12 {
+		width: 40.73%;
+	}
+
+	.col-6-12 {
+		width: 49.2%;
+	}
+
+	.col-7-12 {
+		width: 57.66%;
+	}
+
+	.col-8-12 {
+		width: 66.13%;
+	}
+
+	.col-9-12 {
+		width: 74.6%;
+	}
+
+	.col-10-12 {
+		width: 83.06%;
+	}
+
+	.col-11-12 {
+		width: 91.53%;
+	}
+
+	.col-12-12 {
+		width: 100%;
+	}
+}
